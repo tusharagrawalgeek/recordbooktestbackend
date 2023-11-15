@@ -1,0 +1,51 @@
+GET http://localhost:3001/getitem
+
+###
+POST http://localhost:3001/setitem
+Content-Type: application/json
+
+{
+"name":"item",
+"quantity":20,
+"date":"",
+"expiry":"",
+"description":"add via rest",
+"receivedBy":"human",
+"receivedFrom":"human"
+}
+
+###
+DELETE http://localhost:3001/deleteitem/63ee4c810bfd4b690e76f1e6
+
+###
+GET http://localhost:3001/getuser
+
+###
+POST http://localhost:3001/setuser
+Content-Type: application/json
+
+{
+    "username":"tushar",
+    "email":"iamtushar6003@gmail.com",
+    "phone":4512547850,
+    "age":25,
+    "password":"tushar123"
+}
+
+###
+GET http://localhost:3001/getuser
+Content-Type: application/json
+
+{
+    "username":"tushar",
+    "password":"tushar123"
+}
+
+###
+GET http://localhost:3001/findusername
+Content-Type: application/json
+
+{
+    "username":"tushar"
+}
+
