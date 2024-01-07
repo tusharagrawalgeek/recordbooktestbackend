@@ -130,7 +130,7 @@ app.delete("/deleteexporteditem/:id", async (req, res) => {
   .then(res.send("Deleted"))
   .catch(console.log)
 });
-app.get("/getuser", async (req, res, next) => {
+app.post("/getuser", async (req, res, next) => {
   try {
     console.log(req.body.username,req.body.password);
     const data = await User.find({username:req.body.username, password:req.body.password});
